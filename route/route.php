@@ -9,12 +9,6 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-Route::get('think', function () {
-    return 'hello,ThinkPHP5!';
-});
-
-Route::get('hello/:name', 'index/hello');
-
-return [
-
-];
+Route::header('Access-Control-Allow-Credentials', 'true')->allowCrossDomain(); //允许跨域的目录
+Route::rule('/', 'index/index');
+Route::miss('index/index/miss');

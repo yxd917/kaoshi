@@ -8,4 +8,7 @@ class Index
         return view();
     }
 
+    public function miss() {
+        return view();
+    }
 }
